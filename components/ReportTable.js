@@ -18,16 +18,18 @@ export default function ReportTable() {
                         {cities.map((item, index) => (<>
                             <tr className={index % 2 != 0 ? 'bg-green-300' : 'bg-green-400'}>
                                 {item.map(element => (
-                                    <td className='border border-black'>{element}</td>
+                                    <td className='border border-black '>{element}</td>
                                 ))}
                             </tr>
                         </>))}
 
                     </tbody>
                     <tfoot>
+                        <tr>
                             {Totals.map(item => (
-                                <th className='p-4 bg-green-600 border border-black' >{item}</th>
+                                <td className='p-4 font-bold bg-green-600 border border-black' >{item}</td>
                             ))}
+                        </tr>
                     </tfoot>
                 </table>
             ) : <h2 className="p-10 text-2xl">No Cookie Stands Available</h2>}
