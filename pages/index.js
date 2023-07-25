@@ -1,23 +1,27 @@
-import Head from "next/head";
-import Header from 'components/Header';
-import Main from 'components/Main';
-import Footer from "@/components/Footer";
-import ReportTable from "@/components/ReportTable";
+import { useAuth } from "../contexts/auth"
+import Home from "@/components/Home";
+import LoginForm from "@/components/LoginForm";
 
 export default function CookieStandAdmin() {
+  const { user } = useAuth();
+
+
 
   return (
     <>
-      <Head>
-        <title>Cookie Stand Admin</title>
-      </Head>
-
-      <Header />
-      <Main />
-      <ReportTable />
-      <Footer />
-      
+      {user ? (
+        <>
+          
+          <Home/>
+        </>
+      ) : (
+        <>
+          
+          <LoginForm/>
+        </>
+      )}
     </>
+
   )
 
 }
