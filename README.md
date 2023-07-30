@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## username: root
 ## password: 1234
 ## Getting Started
-
+## deployed URL 'https://cookie-stand-admin-abdullah-dev.vercel.app/'
 First, run the development server:
 
 ```bash
